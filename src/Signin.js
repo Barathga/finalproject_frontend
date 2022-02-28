@@ -8,7 +8,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-
+import Swal from "sweetalert2";
 
 function Signin() {
   const navigate = useNavigate();
@@ -54,7 +54,12 @@ function Signin() {
       console.log(response.data);
     } catch (err) {
       console.error(err);
-      alert("Invalid User Information");
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Invalid User Information!',
+        footer: '<a href="">Why do I have this issue?</a>'
+      })
     }
   };
 

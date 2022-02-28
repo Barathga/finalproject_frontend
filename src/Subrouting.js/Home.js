@@ -1,7 +1,6 @@
 import React from "react";
 import college from "./college.png";
 import tlclogo from "./TLClogo.png";
-// import { Box } from '@mui/system';
 
 function Home() {
   return (

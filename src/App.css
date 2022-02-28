@@ -1,4 +1,3 @@
-
 .links{
   height: 40em;
   text-decoration: none;
@@ -29,7 +28,10 @@
   text-align: center;
   padding-top: 1em;
   padding-left: 30em;
-  background-image: linear-gradient(lightblue, yellow);
+  background-image: url('./Subrouting.js/wallback.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  height:100vh;
 }
 
 .aboutimg{
@@ -60,9 +62,16 @@
 }
 
 .taskcard{
-  padding-top: 5em;
+  padding-top: 15em;
   padding-bottom: 35em;
   padding-left:30em;
+  padding-right: 120%;
+  overflow-x:hidden ;
+  overflow-y:hidden ;
+  background-image: url('./Subrouting.js/wallback.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  height:100vh;
 }
 
 .boxhome{
@@ -72,10 +81,30 @@
 }
 
 .contactbox{
-  height: 51em;
-  width: 100%;
+  height: 46em;
   text-align: center;
   padding-top: 5em;
   padding-left: 30em;
-  background-image: linear-gradient(lightblue, yellow);
+  background-image: url('./Subrouting.js/wallback2.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.span{
+  width: 50px;
+}
+
+.homepage{
+    background-image: url("./Subrouting.js/background1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.course{
+   background-image: url('./Subrouting.js/wallback2.jpeg');
+   background-attachment: fixed;
+   background-size: cover;
+   height: 150vh;
+   width:120%;
 }

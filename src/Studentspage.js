@@ -16,10 +16,9 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
+import HomeIcon from '@mui/icons-material/Home';
 import CodeIcon from "@mui/icons-material/Code";
 import TaskIcon from "@mui/icons-material/Task";
-// import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import { Button, ListItemButton } from "@mui/material";
 import { Outlet, useNavigate } from "react-router";
 import axios from "axios";
@@ -170,7 +169,7 @@ export default function MiniDrawer() {
           <Link to="" style={{ textDecoration: "none" }}>
             <ListItem>
               <ListItemIcon>
-                <InboxIcon />
+                <HomeIcon/>
               </ListItemIcon>
               <ListItemButton>
                 <ListItemText primary="Home" />
@@ -206,20 +205,6 @@ export default function MiniDrawer() {
             </ListItemButton>
           </ListItem>
         </Link>
-
-
-       {/*-----------------department--------------------*/}
-
-        {/* <Link to="/Studentspage/department" style={{ textDecoration: "none" }}>
-          <ListItem>
-            <ListItemIcon>
-              <PrecisionManufacturingIcon />
-            </ListItemIcon>
-            <ListItemButton>
-              <ListItemText primary="Department" />
-            </ListItemButton>
-          </ListItem>
-        </Link> */}
       </Drawer>
 
       <Box sx={{height:"100%"}}>

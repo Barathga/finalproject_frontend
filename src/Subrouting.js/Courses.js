@@ -19,7 +19,7 @@ import html from './html.jpeg'
 
 function Courses() {
   return (
-    <>
+    <div className='course'>
     
     <Box sx={{pt:10}}>
        {/* ------------------1st card---------------- */}
@@ -36,7 +36,7 @@ function Courses() {
         </Typography>
       </CardContent>
       <CardActions>
-      <Button size="small">Start The Course</Button>
+      <Button size="small"> Book The Course </Button>
         <Button size="small">About the Course</Button>
       </CardActions>
     </Card>
@@ -55,7 +55,7 @@ function Courses() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Start The Course</Button>
+        <Button size="small">Book The Course</Button>
         <Button size="small">About the Course</Button>
       </CardActions>
     </Card>
@@ -73,7 +73,7 @@ function Courses() {
         </Typography>
       </CardContent>
       <CardActions>
-      <Button size="small">Start The Course</Button>
+      <Button size="small">Book The Course</Button>
         <Button size="small">About the Course</Button>
       </CardActions>
     </Card>
@@ -96,7 +96,7 @@ function Courses() {
         </Typography>
       </CardContent>
       <CardActions>
-      <Button size="small">Start The Course</Button>
+      <Button size="small">Book The Course</Button>
         <Button size="small">About the Course</Button>
       </CardActions>
     </Card>
@@ -114,7 +114,7 @@ function Courses() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Start The Course</Button>
+        <Button size="small">Book The Course</Button>
         <Button size="small">About the Course</Button>
       </CardActions>
     </Card>
@@ -132,7 +132,7 @@ function Courses() {
         </Typography>
       </CardContent>
       <CardActions>
-      <Button size="small">Start The Course</Button>
+      <Button size="small">Book The Course</Button>
         <Button size="small">About the Course</Button>
       </CardActions>
     </Card>
@@ -155,7 +155,7 @@ function Courses() {
         </Typography>
       </CardContent>
       <CardActions>
-      <Button size="small">Start The Course</Button>
+      <Button size="small">Book The Course</Button>
         <Button size="small">About the Course</Button>
       </CardActions>
     </Card>
@@ -173,7 +173,7 @@ function Courses() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Start The Course</Button>
+        <Button size="small">Book The Course</Button>
         <Button size="small">About the Course</Button>
       </CardActions>
     </Card>
@@ -191,13 +191,13 @@ function Courses() {
         </Typography>
       </CardContent>
       <CardActions>
-      <Button size="small">Start The Course</Button>
+      <Button size="small">Book The Course</Button>
         <Button size="small">About the Course</Button>
       </CardActions>
     </Card>
     </Box>
 
-    </>
+    </div>
   )
 }
 
