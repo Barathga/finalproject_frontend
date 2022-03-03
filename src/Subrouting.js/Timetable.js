@@ -1,14 +1,14 @@
-import React from 'react'
+// import React from 'react'
 
-function Timetable() {
-  return (
-      <>
-      <div>Timetable</div>
-      <div>Timetable</div>
-      <div>Timetable</div>
-      <div>Timetable</div>
-      </>
-  )
-}
+// function Timetable() {
+//   return (
+//       <>
+//       <div>Timetable</div>
+//       <div>Timetable</div>
+//       <div>Timetable</div>
+//       <div>Timetable</div>
+//       </>
+//   )
+// }
 
-export default Timetable
+// export default Timetable

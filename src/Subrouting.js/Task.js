@@ -23,7 +23,7 @@ export default function Task() {
   const handleSubmit = async (value) => {
     console.log(value);
     try {
-      var response = await axios.post("http://localhost:8000/task", {
+      var response = await axios.post("https://final-backend01.herokuapp.com/task", {
         studentid: value.studentid,
         taskName: value.taskName,
         subjectName: value.subjectName,

@@ -8,13 +8,12 @@ function Assignment() {
 useEffect(() => {
     const loadData = async () => {
       let response = await axios.get(
-        "http://localhost:8000/task1"
+        "https://final-backend01.herokuapp.com/task1"
       );
       setData(response.data);
     };
     loadData();
   }, []);
-  console.log(data)
   return (
     <div className='assignmentrouter'>
         <div>
