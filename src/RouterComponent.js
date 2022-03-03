@@ -8,10 +8,10 @@ import Signup from './Signup';
 import Studentspage from './Studentspage';
 import Home from './Subrouting.js/Home';
 import Task from './Subrouting.js/Task';
-import Assignment from './Subrouting.js/Assignment';
+// import Assignment from './Subrouting.js/Assignment';
 import Courses from './Subrouting.js/Courses';
-import Timetable from './Subrouting.js/Timetable';
-import Department from './Subrouting.js/Department';
+// import Timetable from './Subrouting.js/Timetable';
+// import Department from './Subrouting.js/Department';
 
 function RouterComponent() {
   return (
@@ -27,10 +27,10 @@ function RouterComponent() {
             <Route path="/Studentspage" element={<Studentspage/>}>
               <Route path="" element={<Home/>}></Route>
               <Route path="/Studentspage/task" element={<Task/>}></Route>
-              <Route path="/Studentspage/assignment" element={<Assignment/>}></Route>
               <Route path="/Studentspage/courses" element={<Courses/>}></Route>
-              <Route path="/Studentspage/timetable" element={<Timetable/>}></Route>
-              <Route path="/Studentspage/department" element={<Department/>}></Route>
+              {/* <Route path="/Studentspage/assignment" element={<Assignment/>}></Route> */}
+              {/* <Route path="/Studentspage/timetable" element={<Timetable/>}></Route>
+              <Route path="/Studentspage/department" element={<Department/>}></Route> */}
             </Route>
 
             </Routes>

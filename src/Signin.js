@@ -58,7 +58,6 @@ function Signin() {
         icon: 'error',
         title: 'Oops...',
         text: 'Invalid User Information!',
-        footer: '<a href="">Why do I have this issue?</a>'
       })
     }
   };

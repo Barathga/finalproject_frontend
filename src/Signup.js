@@ -58,7 +58,6 @@ function Signin() {
         icon: 'error',
         title: 'Oops...',
         text: 'Already Exists!',
-        // footer: '<a href="">Why do I have this issue?</a>'
       })
     }
   };
@@ -66,7 +65,7 @@ function Signin() {
  
   console.log(initialValue);
   return (
-    <Box className="signinbox">
+    <Box className="signupbox">
       <h3>SIGN UP PAGE</h3>
       <Formik
         initialValues={initialValue}
@@ -218,11 +217,3 @@ function Signin() {
   );
 }
 export default Signin;
-
-
-// git init
-// git add README.md
-// git commit -m "first commit"
-// git branch -M main
-// git remote add origin https://github.com/Barathga/finalproject_frontend.git
-// git push -u origin main
