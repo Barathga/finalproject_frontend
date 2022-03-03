@@ -23,6 +23,7 @@ import { Button, ListItemButton } from "@mui/material";
 import { Outlet, useNavigate } from "react-router";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import AssignmentIcon from '@mui/icons-material/Assignment';
 
 
 const drawerWidth = 240;
@@ -205,6 +206,20 @@ export default function MiniDrawer() {
             </ListItemButton>
           </ListItem>
         </Link>
+
+        {/* ---------------------------Assignment--------------------- */}
+
+        <Link to="/Studentspage/assignment" style={{ textDecoration: "none" }}>
+          <ListItem>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemButton>
+              <ListItemText primary="Assignment" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
+
       </Drawer>
 
       <Box sx={{height:"100%"}}>

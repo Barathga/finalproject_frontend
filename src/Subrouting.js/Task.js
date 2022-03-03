@@ -1,9 +1,10 @@
-import React from "react";
 import { Formik } from "formik";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-function Task() {
+
+export default function Task() {
+
   const initialValue = {
     studentid: "",
     taskName: "",
@@ -21,46 +22,48 @@ function Task() {
   };
   const handleSubmit = async (value) => {
     console.log(value);
-    try{
-      var response = await axios.post('http://localhost:8000/task',{
-        studentid : value.studentid,
-        taskName : value.taskName,
-        subjectName : value.subjectName,
-        submittedOn : value.submittedOn,
+    try {
+      var response = await axios.post("http://localhost:8000/task", {
+        studentid: value.studentid,
+        taskName: value.taskName,
+        subjectName: value.subjectName,
+        submittedOn: value.submittedOn,
       });
-      if(response.data){
+      if (response.data) {
         await localStorage.setItem("token", response.data);
-// ----------------------want to navigate--------------------
       }
       console.log(response.data);
       Swal.fire(
-        'Successfully Submitted!!',
-        'success'
-      )
+        "Successfully Submitted!! View it in the Assignment page",
+        "success"
+      );
     } catch (err) {
       console.error(err);
       Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'You have already submitted!',
-      })
+        icon: "error",
+        title: "Oops...",
+        text: "You have already submitted!",
+      });
     }
   };
 
-  const handleReset = () =>{
-    initialValue.studentid = '';
-    initialValue.taskName = '';
-    initialValue.subjectName = '';
-    initialValue.submittedOn= ''; 
-  }
+  const handleReset = () => {
+    initialValue.studentid = "";
+    initialValue.taskName = "";
+    initialValue.subjectName = "";
+    initialValue.submittedOn = "";
+  };
+
+  
 
   return (
     <div className="taskcard">
       <Formik
         initialValues={initialValue}
-        validate = {(value) => validate(value)}
-        onSubmit = {(value) => handleSubmit(value)}
-        onReset = {(value) => handleReset(value)}
+        validate={(value) => validate(value)}
+        onSubmit={(value) => handleSubmit(value)}
+        onReset={(value) => handleReset(value)}
+        // onChange={(value)=> handleChange(value)}
       >
         {({
           values,
@@ -72,9 +75,8 @@ function Task() {
           resetForm,
         }) => (
           <form onSubmit={handleSubmit}>
-
             {/* -----------------------student ID--------------- */}
-
+            
             <div>
               <input
                 type="text"
@@ -90,7 +92,7 @@ function Task() {
                 {touched.studentid && errors.studentid}{" "}
               </span>
             </div>
-            <br/>
+            <br />
             {/* -----------------taskname-------------- */}
 
             <div>
@@ -133,42 +135,50 @@ function Task() {
 
             <div>
               <input
-                type="text"
+                type="date"
                 name="submittedOn"
                 size={50}
-                placeholder="Submitted On"
+                placeholder="Date"
                 value={values.submittedOn}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              <br />
-              <span style={{ color: "white" }}>
-                {" "}
-                {touched.submittedOn && errors.submittedOn}{" "}
-              </span>
             </div>
             <br />
 
             {/* ----------------------------choosefile----------------------- */}
 
             <div>
-              <input type="file"/>
+              <input type="file" />
             </div>
             <br />
 
             {/* --------------submit button------------- */}
 
-            <button type="submit"> Submit </button> 
-            <br/>
-            <br/>
+            <button type="submit"> Submit </button>
+            <br />
+            <br />
             {/* ----------------reset button------------- */}
 
-            <button type="button" onClick={resetForm}> Reset </button>
+            <button type="button" onClick={resetForm}>
+              {" "}
+              Reset{" "}
+            </button>
 
           </form>
         )}
       </Formik>
+       
+
+
+
+
+
+
+
+
+
     </div>
   );
 }
-export default Task;
+
